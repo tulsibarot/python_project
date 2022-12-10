@@ -13,4 +13,7 @@ urlpatterns = [
    path('trainers/',views.trainers,name='trainers'),
    path('registration/',views.registration,name='registration'),
    path('index/login/',views.login,name='login'),
+   path('otp/',views.otp,name='otp'),
+   path('buy/paymenthandler/', views.paymenthandler, name='paymenthandler'),
+   path('buy/', views.buy, name="buy"),
 ]

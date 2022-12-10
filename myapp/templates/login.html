@@ -81,20 +81,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="sub-main-w3">
 				<h3>LOGIN NOW</h3>
 				
-				<form action="#" method="post">
-					
+				<form action="{% url 'login' %}" method="POST">
+					{% csrf_token %}
+					{{msg}}
 					<div class="form-style-agile">
 						<label>Email</label>
 						<div class="pom-agile">
 							<span class="fa fa-envelope-open"></span>
-							<input placeholder="Email" name="Email" type="email" required="">
+							<input placeholder="Email" name="email" type="email" required="">
 						</div>
 					</div>
 					<div class="form-style-agile">
 						<label>Password</label>
 						<div class="pom-agile">
 							<span class="fa fa-key"></span>
-							<input placeholder="Password" name="Password" type="password" id="password1" required="">
+							<input placeholder="Password" name="password" type="password" id="password1" required="">
 						</div>
 					</div>
 				
